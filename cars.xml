@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet href="cars.xsl" type="text/xsl"?>
+<car>
+	<brand>
+		<kia>
+			<type fuel="petrol">Rio</type>
+			<reg>01-WX-5928</reg>
+			<engineSize>1.3</engineSize>
+			<colour>red</colour>
+			<price>€800</price>
+		</kia>
+	</brand>
+	<brand>
+		<toyota>
+			<type fuel="petrol">Auris</type>
+			<reg>07-MH-6065</reg>
+			<engineSize>1.4</engineSize>
+			<colour>blue</colour>
+			<price>€4500</price>
+		</toyota>
+	</brand>
+	<brand>
+		<bmw>
+			<type fuel="diesel">3 Series</type>
+			<reg>04-D-35453</reg>
+			<engineSize>2.0</engineSize>
+			<colour>white</colour>
+			<price>€3500</price>
+		</bmw>
+	</brand>
+	<brand>
+		<fiat>
+			<type fuel="diesel">Punto</type>
+			<reg>10-LH-35857</reg>
+			<engineSize>1.9</engineSize>
+			<colour>orange</colour>
+			<price>€5000</price>
+		</fiat>
+	</brand>
+	<brand>
+		<ford>
+			<type fuel="petrol">Focus</type>
+			<reg>03-KY-11094</reg>
+			<engineSize>1.6</engineSize>
+			<colour>silver</colour>
+			<price>€1750</price>
+		</ford>
+	</brand>
+	<brand>
+		<nissan>
+			<type fuel="petrol">Almera</type>
+			<reg>02-C-83965</reg>
+			<engineSize>1.2</engineSize>
+			<colour>black</colour>
+			<price>€900</price>
+		</nissan>
+	</brand>
+	</brand>
+</car>
