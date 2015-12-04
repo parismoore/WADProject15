@@ -8,6 +8,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta charset="utf-8" />
+	<link type="text/css" rel="stylesheet" href="dreamcodes/form_beautify/css/jqtransform.css" />
+	<script type="text/javascript" src="dreamcodes/form_beautify/js/jquery.jqtransform.js"></script>
 	
 	<!--Slider-->
 	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
@@ -156,9 +158,9 @@
 		</div>
 		<div class="fourcol last">
 		<br />
-			<center><a href="https://twitter.com" class="socialicon twitter" target="Twitter"><img src="pics/twitter.png" style="height:65px;width:65px;border-radius:130px"></img></a>
-			<a href="http://www.facebook.com" class="socialicon facebook" target="Facebook"><img src="pics/fb.png" style="height:65px;width:65px;border-radius:130px"></img></a>
-			<a href="http://www.linkedin.com" class="socialicon linkedin" target="Linkedin"><img src="pics/linkedin.png" style="height:65px;width:65px;border-radius:130px"></img></a></center>
+			<center><a href="https://twitter.com" class="socialicon twitter" target="Twitter"><img src="pics/twitter.png" style="height:55px;width:55px;border-radius:110px"></img></a>
+			<a href="http://www.facebook.com" class="socialicon facebook" target="Facebook"><img src="pics/fb.png" style="height:55px;width:55px;border-radius:110px"></img></a>
+			<a href="http://www.linkedin.com" class="socialicon linkedin" target="Linkedin"><img src="pics/linkedin.png" style="height:55px;width:55px;border-radius:110px"></img></a></center>
 		</div>
 		<br />
 	</div>
@@ -180,31 +182,35 @@
 
 <div class="container">
 	<div class="row">
-		<div class="fourcol">
+		<div class="threecol">
 			<br />
-			<form name='myForm'>
-				Car Registration No: <input type='text' id='reg' /> <br />
-				Car Brand: <select id='carBrand'>
-				<option value="Choose">Choose Any..</option>
-				<option value="Kia">Kia</option>
-				<option value="Toyota">Toyota</option>
-				<option value="BMW">BMW</option>
-				<option value="Fiat">Fiat</option>
-				<option value="Ford">Ford</option>
-				<option value="Nissan">Nissan</option>
-				</select>
-				<br />
-				Car Type: <input type='text' id='carType' /><br />
-				Engine Size: <input type='text' id='engineSize' /><br />
-				Colour: <input type='text' id='colour' /><br />
-				Price: <input type='text' id='price' /><br />
-				<br />
-        
-				<input type='button' onclick='ajaxFunction()' value='Enter'/>
-			
+			<form action="cars.php" method="POST">
+				<table border="0" cellspacing="0" cellpadding="6" bgcolor="#ffffff" style="padding:25px; border:1px dotted #ccc; ">
+				<tr><td><h3>Enter A Car Brand:</h3><br /></td></tr>
+				<tr>
+					<td><select name="selectmenu1">
+						<option value="choose">Choose Any..</option>
+						<option value="kia">Kia</option>
+						<option value="toyota">Toyota</option>
+						<option value="bmw">BMW</option>
+						<option value="fiat">Fiat</option>
+						<option value="ford">Ford</option>
+						<option value="nissan">Nissan</option>
+					</select></td>
+				</tr>
+				<tr><td><br /></td></tr>
+				<tr>
+					<td><input type="submit" value="Enter" /></td>
+				</tr>
+				</table>
 			</form>
+			<script language="javascript">
+				$(function(){
+					$('form').jqTransform({imgPath:'form_beautify/img/'});
+				});
+			</script> 
 		</div>
-		<div class="eightcol last">
+		<div class="ninecol last">
 		<br />
 			<div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 600px; height: 300px; overflow: hidden; visibility: hidden;">
         <!-- Loading Screen -->
