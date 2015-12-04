@@ -2,6 +2,10 @@
 /* ! Layout for desktop version   */
 /* ============================== */
 
+body{
+background-image: url("../pics/background.jpg");
+}
+
 #logo{
 height:150px;
 width:250px;
