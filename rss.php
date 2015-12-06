@@ -3,7 +3,7 @@
 	 * PHP SimpleXML
 	 * Loading a XML from a file, adding new elements and editing elements
 	 */
-	$author = $_POST["author"];
+	$reg = $_POST["reg"];
 
 	if (file_exists('cars.xml')) {
 		//loads the xml and returns a simplexml object

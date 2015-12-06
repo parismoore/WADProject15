@@ -1,15 +1,14 @@
 <?php
-// Load the XML source
-$xml = new DOMDocument();
-$xml->load('books.xml');
+//load the xml source
+$xml = new DOMDOCUMENT;
+$xml->load('cars.xml');
+$xsl = new DOMDOCUMENT;
+$xsl->substituteEntities = true;
+$xsl->load('cars.xsl');
 
-// Start xslt
-$xslt = new XSLTProcessor();
+//configure the transformer
+$proc = new XSLTProcessor;
+$proc->importStyleSheet($xsl); 
 
-// Import Stylesheet
-$xsl = new DOMDocument();
-$xsl->load('books.xsl');
-$xslt->importStylesheet($xsl);
-
-print $xslt->transformToXML($xml);
+echo $proc->transformToXML($xml);
 ?>

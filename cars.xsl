@@ -16,7 +16,6 @@
 	</head>
 	<body>
 		<h2>Petrol Cars:</h2>
-		<!--http://videlibri.sourceforge.net/cgi-bin/xidelcgi-->
 		<xsl:apply-templates select="//type[@fuel='petrol']/../*"/>
 		
 		<h2>Diesel Cars:</h2>
