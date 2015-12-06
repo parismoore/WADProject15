@@ -1,3 +1,2 @@
 Bootstrap Andy Taylor CSS Grid: https://github.com/andytlr/cssgrid
-Navbar: 
 JQuery Slider: http://www.jssor.com/demos/simple-fade-slideshow.slider
