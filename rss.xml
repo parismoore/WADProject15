@@ -1,0 +1,38 @@
+<rss version="2.0">
+	<channel>
+		<title>Example RSS Feed</title>
+		<link>/home/ubuntu/workspace/books.xml</link>
+		<description>Stuff</description>
+		<item>
+		<title>Entry Title</title>
+		<link>Link to the entry</link>
+		<guid>http://example.com/item/123</guid>
+		<pubDate>Sat, 9 Jan 2010 16:23:41 GMT</pubDate>
+		<description>[CDATA[ This is the description. ]]</description>
+		</item>
+		<item>
+		<title/>
+		<link>XML Rocks</link>
+		<guid>Computing</guid>
+		<description>100 $</description>
+		</item>
+		<item>
+		<title/>
+		<link>XML Rocks</link>
+		<guid>Computing</guid>
+		<description>100 $</description>
+		</item>
+		<item>
+		<title/>
+		<link>XML Rocks</link>
+		<guid>Computing</guid>
+		<description>100 $</description>
+		</item>
+		<item>
+		<title>BCHC2</title>
+		<link>XML Rocks</link>
+		<guid>Computing</guid>
+		<description>100 $</description>
+		</item>
+	</channel>
+</rss>

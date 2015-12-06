@@ -2,14 +2,46 @@
 <html lang="en"><!--language=english-->
 
 <head>
-	<title>Cars4Ca$h</title>
+	<title>Cars4Cash</title>
 	
 	<link rel="shortcut icon" href="pics/title_icon.png" /> <!--icon beside title-->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" /><!--goes with slider<-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" /><!--goes with slider-->
 	<meta charset="utf-8" />
-	<meta http-equiv="refresh" content="30"><!--refreshes doc every 30 seconds-->
-	<link type="text/css" rel="stylesheet" href="dreamcodes/form_beautify/css/jqtransform.css" /><!-- the form on the first page-->
-	<script type="text/javascript" src="dreamcodes/form_beautify/js/jquery.jqtransform.js"></script><!-- the form on the first page-->
+	<!--<meta http-equiv="refresh" content="30">refreshes doc every 30 seconds-->
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script>
+	$("#pageContent").load(pageURL, function(response, status, xhr) {
+    if (status == "error") {
+        // handle error - add an error page to display
+        $("#pageContent").text("Page not found!!");
+    }
+	});
+	</script>
+	<script>
+	var XMLHttpRequestObject = false;
+	if(window.XMLHttpRequest){
+		XMLHttpRequestObject = new XMLHttpRequest();
+	}
+	else if(window.ActiveXObject){
+		XMLHttpRequestObject = new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	
+	function getData(datasource,divID){
+		if(XMLHttpRequestObject){
+			var obj = document.getElementById(divID);
+			XMLHttpRequestObject.open("GET",datasource,true);
+			XMLHttpRequestObject.onreadystatechange = 
+			function(){
+				if(XMLHttpRequestObject.readyState==4 && XMLHttpRequestObject.status==200){
+					obj.innerHTML = XMLHttpRequestObject.responseText;
+				}
+			}
+			XMLHttpRequestObject.send(null);
+		}
+	}
+	</script>
+	
 	
 	<!--Slider-->
 	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
@@ -141,7 +173,7 @@
 	}
 	
 	</style>
-	
+
 </head>
 
 
@@ -154,7 +186,7 @@
 		</div>
 		<div class="fourcol">
 			<br />
-			<center><h1 style="font-family:impact">Cars 4 Cash</h1></center>
+			<center><span style="font-family:impact;font-size:60px;">Cars 4 Cash</span></center>
 		</div>
 		<div class="fourcol last">
 		<br />
@@ -172,24 +204,25 @@
 			<div id="cssmenu">
 			<ul>
 			<li class="active"><a href="index.html">Home</a></li>
-			<li><a href="about.html">About Us</a></li>
+			<li><a href="#">About Us</a></li>
 			<li><a href="#">Contact</a></li>
 			</ul>
 			</div>
 		</div>
 	</div>
 </div>
-
+<div id="pageContent">
 <div class="container">
 	<div class="row">
-		<div class="threecol">
+		<div class="fourcol">
 			<br />
-			<form action="cars.php" method="POST">
+			<form method="POST" action="cars.php">
 				<table border="0" cellspacing="0" cellpadding="6" bgcolor="#ffffff" style="padding:25px; border:1px dotted #ccc; ">
-				<tr><td><h3>Enter A Car Brand:</h3><br /></td></tr>
+				<tr><td><span>Are you looking for a second hand car? Then look no further!</span><br /><br /></td></tr>
+				<tr><td><h3>Enter a Car Brand:</h3><br /></td></tr>
 				<tr>
 					<td><select name="selectmenu1">
-						<option value="choose">Choose Any..</option>
+						<option value="select"></option>
 						<option value="kia">Kia</option>
 						<option value="toyota">Toyota</option>
 						<option value="bmw">BMW</option>
@@ -210,7 +243,7 @@
 				});
 			</script> 
 		</div>
-		<div class="ninecol last">
+		<div class="eightcol last">
 		<br />
 			<div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 600px; height: 300px; overflow: hidden; visibility: hidden;">
         <!-- Loading Screen -->
@@ -242,49 +275,60 @@
         <span data-u="arrowright" class="jssora12r" style="top:0px;right:0px;width:30px;height:46px;" data-autocenter="2"></span>
         <a href="http://www.jssor.com" style="display:none">Bootstrap Carousel</a>
     </div>
+	</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="twelvecol last">
+			<br />
+			<center><h2 style="text-decoration: underline;"><span style="background-color:white;">Some of our cars on offer:</span></h2></center>
 		</div>
-	<!--<div class="threecol last">
-			<p>Three columns</p>
-		</div>-->
 	</div>
 </div>
 
 <div class="container">
 	<div class="row">
 		<div class="fourcol">
-			<p>Four columns</p>
+        <p>
+            <table>
+                <tr>
+                    <td><img src="pics/rio.jpg" onmouseover="getData('rio.txt','ajaxDesc')" style="height:250px;width:350px;"/></td>
+
+                </tr>
+            </table>
+        </p>
 		</div>
 		<div class="fourcol">
-			<p>Four columns</p>
+        <p>
+            <table>
+                <tr>
+                    <td><img src="pics/auris.jpg" onmouseover="getData('auris.txt','ajaxDesc')" style="height:250px;width:350px;"/></td>
+                </tr>
+            </table>
+        </p>
 		</div>
 		<div class="fourcol last">
-			<p>Four columns</p>
+        <p>
+            <table>
+                <tr>
+                    <td><img src="pics/punto.jpg" onmouseover="getData('punto.txt','ajaxDesc')" style="height:250px;width:350px;"/></td>
+                </tr>
+            </table>
+        </p>
 		</div>
 	</div>
 </div>
 
 <div class="container">
 	<div class="row">
-		<div class="onecol">
-			<p>One</p>
-		</div>
-		<div class="elevencol last">
-			<p>Eleven columns</p>
+		<div class="twelvecol last">
+			<center><div id="ajaxDesc"></div></center>
 		</div>
 	</div>
 </div>
-
-<div class="container">
-	<div class="row">
-		<div class="twocol">
-			<p>Two columns</p>
-		</div>
-		<div class="tencol last">
-			<p>Ten columns</p>
-		</div>
-	</div>
 </div>
-
 <div class="container">
 	<div class="row">
 		<div class="threecol">

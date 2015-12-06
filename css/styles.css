@@ -11,6 +11,16 @@ height:150px;
 width:250px;
 }
 
+#ajaxDesc{
+background-color:#3366CC;
+color:white;
+width:300px;
+border-top-left-radius: 150px;
+border-top-right-radius: 150px;
+border-bottom-left-radius: 150px;
+border-bottom-right-radius: 150px; 
+}
+
 /* Social Media Icons */
 
 .socialicon, .socialicon:visited 
